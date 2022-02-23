@@ -1,0 +1,113 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Begin site styles below */
+:root {
+  --dark-color: #0a0a0a;
+  --light-color: #f3f3f3;
+  --lightest-color: #ffffff;
+}
+
+body {
+  background-color: var(--light-color);
+}
+
+nav {
+  background-color: var(--dark-color);
+  opacity: 0.9;
+  display: flex;
+  height: 4.6875em;
+}
+
+nav a {
+  font-size: 1.625em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 1em;
+  background: -webkit-linear-gradient(45deg, rgb(100, 26, 185), rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#cart-icon {
+  margin-left: auto;
+  fill: currentColor;
+  color: red;
+  height: 2em;
+  width: 2em;
+}
+
+ul, li {
+  height: inherit
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  padding-top: 3.5em;
+}
+
+main > section {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+}
+
+#cart-items-container {
+  flex-basis: 66%;
+  padding: 0 0.9375em 0 0.9375em;
+}
+
+#cart-summary-container {
+  flex-basis: 34%;
+  padding: 0 0.9375em 0 0.9375em;
+}
+
+#cart-items, #cart-summary {  
+  background-color: var(--lightest-color);
+  padding: 1.5em;
+}
+
+.cart-item {
+  display: flex
+}
+
+.cart-item .details > header {
+  margin-top: 1em; /* 16px */
+  margin-bottom: 0.5em; /* 8px */
+  border-bottom: 0.125em solid var(--dark-color); /* 2 / 16 = 0.125 */
+}
+
+.cart-item .details {
+  line-height: 2em;
+}
+
+.cart-item .misc {
+  display: flex;
+  flex-direction: column;
+  /* align-self: flex-end; */
+  /* flex-grow: 1; */
+  margin-left: auto;
+}
+
+.cart-item .misc header {
+  margin-bottom: 7em;
+}
+
+.cart-item .icon {
+  flex-basis: 9.375em;
+  height: 9.375em
+}
+
+.cart-item .title, .cart-item .description {
+  grid-column-start: 2;
+}
