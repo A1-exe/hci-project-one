@@ -10,6 +10,7 @@
   <title>Cybersecurity StartUp</title>
 </head>
 <body>
+  <header>
     <nav>
       <a href="">
         <h1>CYBERSTART SECURITY</h1>
@@ -18,43 +19,106 @@
         &#x1F6CD;
       </a>
     </nav>
-    <main id="cart">
-      <section id="cart-items-container">
-        <section id="cart-items">
-            <header>
-                <h1>Shopping Cart (1 Item)</h1>
-            </header>
-              <section class="cart-item">
-                  <figure class="icon">
-                      <img src="" alt="">
-                      <figcaption></figcaption>
-                  </figure>
-                  <section class="details">
-                    <header>
-                      <h1 class="title">
-                        Super Hacker Certification
-                      </h1>
-                    </header>
-                    <p class="description">
-                        This certification will turn you into a 1337 hacker.
-                    </p>
-                  </section>
-                  <section class="misc">
-                      <header>
-                        <h1 class="price">$300</h1>
-                      </header>
-                      <button>&#x1F5D1; Remove</button></li>
-                  </section>
-                </section>
-            </section>
+  </header>
+  <main id="cart">
+    <section id="cart-items-container">
+      <ul id="cart-items">
+        <header>
+          <h1>Shopping Cart (3 Items)</h1>
+        </header>
+        <li class="cart-item">
+          <figure class="icon">
+            <img src="../assets/img/trophy.png" alt="">
+            <figcaption></figcaption>
+          </figure>
+          <ul class="details">
+            <li class="title">
+              Super Hacker Certification
+            </li>
+            <li class="description">
+              This certification will turn you into a 1337 hacker.
+            </li>
+            <li class="misc">
+              <h2 class="price">$300</h2>
+              <button class="remove">Remove</button>
+              |
+              <button class="edit">Edit</button>
+            </li>
+          </ul>
+        </li>
+        <li class="cart-item">
+          <figure class="icon">
+            <img src="../assets/img/trophy.png" alt="">
+            <figcaption></figcaption>
+          </figure>
+          <ul class="details">
+            <li class="title">
+              Super Hacker Certification 2
+            </li>
+            <li class="description">
+              This certification will turn you into a 31337 hacker.
+            </li>
+            <li class="misc">
+              <h2 class="price">$300</h2>
+              <button class="remove">Remove</button>
+              |
+              <button class="edit">Edit</button>
+            </li>
+          </ul>
+        </li>
+        <li class="cart-item">
+          <figure class="icon">
+            <img src="../assets/img/trophy.png" alt="">
+            <figcaption></figcaption>
+          </figure>
+          <ul class="details">
+            <li class="title">
+              Super Hacker Certification 3
+            </li>
+            <li class="description">
+              This certification will turn you into a 2312 hacker.
+            </li>
+            <li class="misc">
+              <h2 class="price">$300</h2>
+              <button class="remove">Remove</button>
+              |
+              <button class="edit">Edit</button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section id="cart-summary-container">
+      <form id="cart-summary">
+        <section id="directions">
+          <button id="keep-shop" formaction="../">Keep Shopping</button>
+          <button id="check-out" formaction="../checkout/">Check Out</button>
         </section>
-        <section id="cart-summary-container">
-          <section id="cart-summary">
-            <header>
-                <h1>Summary</h1>
-            </header>
-          </section>
-        </section>
-    </main>
+        <header>
+          <h1>Summary</h1>
+        </header>
+        <table id="cost-listing">
+          <tbody>
+            <tr id="subtotal">
+              <td class="category">Subtotal:</td>
+              <td class="value">$13.58</td>
+            </tr>
+            <tr id="service">
+              <td class="category">Service Fee:</td>
+              <td class="value">$300</td>
+            </tr>
+            <tr id="tax">
+              <td class="category">Tax:</td>
+              <td class="value">$300</td>
+            </tr>
+            <tr id="total">
+              <td class="category">Total:</td>
+              <td class="value">$300</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </section>
+  </main>
 </body>
 </html>

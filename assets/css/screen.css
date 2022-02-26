@@ -30,6 +30,7 @@ nav a {
   padding-right: 1em;
   margin-top: 1em;
   background: -webkit-linear-gradient(45deg, rgb(100, 26, 185), rgb(255, 0, 0));
+  background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -73,41 +74,98 @@ main > section {
 }
 
 #cart-items, #cart-summary {  
+  display: flex;
+  flex-direction: column;
   background-color: var(--lightest-color);
   padding: 1.5em;
 }
 
 .cart-item {
-  display: flex
+  display: flex;
+  margin-top: .5em;
 }
 
-.cart-item .details > header {
-  margin-top: 1em; /* 16px */
-  margin-bottom: 0.5em; /* 8px */
-  border-bottom: 0.125em solid var(--dark-color); /* 2 / 16 = 0.125 */
+.cart-item .icon img {
+  height: 9.375em
 }
 
 .cart-item .details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 1em;
+}
+
+.details .title {
   line-height: 2em;
+  font-weight: 600;
 }
 
 .cart-item .misc {
   display: flex;
+  flex-direction: row;
+  text-align: right;
+  margin-top: auto
+}
+
+.cart-item .misc .price {
+  margin-right: auto;
+  font-weight: 600;
+}
+
+.cart-item .misc button {
+  border: none;
+  background: none;
+}
+
+.remove, .edit {
+  color: red
+}
+
+.remove:hover, .edit:hover {
+  text-decoration: underline;
+}
+
+#directions {
+  display: flex;
+}
+
+#directions button {
+  flex-basis: 50%;
+}
+
+#cart-summary header {
+  margin-top: 1em;
+}
+
+#cost-listing {
+  display: flex;
   flex-direction: column;
-  /* align-self: flex-end; */
-  /* flex-grow: 1; */
-  margin-left: auto;
+  padding: 1em;
+  margin-top: .25em;
+  border-top: .1em solid var(--dark-color);
+  border-bottom: .1em solid var(--dark-color);
 }
 
-.cart-item .misc header {
-  margin-bottom: 7em;
+#cost-listing tr {
+  display: flex;
+  width: 100%;
 }
 
-.cart-item .icon {
-  flex-basis: 9.375em;
-  height: 9.375em
+#cost-listing td {
+  flex-basis: 50%;
+  margin: .2em 0 .2em 0;
 }
 
-.cart-item .title, .cart-item .description {
-  grid-column-start: 2;
+#cost-listing #total {
+  margin-top: 2em;
+}
+
+.category {
+  font-weight: 600;
+  text-align: left;
+}
+
+.value {
+  text-align: right;
 }
