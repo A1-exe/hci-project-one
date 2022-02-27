@@ -21,13 +21,32 @@
     </nav>
   </header>
   <main id="checkout">
-    <section id="billin-container">
-      <ul id="cart-items">
-        
-      </ul>
+    <section id="shipping-container">
+      <form id="shipping">
+        <label for="first-s">First Name</label>
+        <input type="text" name="first-s" id="">
+
+        <label for="last-s">Last Name</label>
+        <input type="text" name="first-s" id="">
+
+        <label for="address-s">Address</label>
+        <input type="text" name="address-s" id="">
+
+        <label for="city-s">City</label>
+        <input type="text" name="city-s" id="">
+
+        <label for="state-s">State</label>
+        <input type="text" name="state-s" id="">
+
+        <label for="zip-s">Zip</label>
+        <input type="text" name="zip-s" id="">
+
+        <label for="phone-s">Phone</label>
+        <input type="text" name="phone-s" id="">
+      </form>
     </section>
     <section id="cart-summary-container">
-      <form id="cart-summary">
+      <form id="cat-summary">
         <section id="directions">
           <button id="keep-shop" formaction="../">Keep Shopping</button>
           <button id="check-out" formaction="../checkout/">Continue</button>
@@ -55,6 +74,31 @@
             </tr>
           </tbody>
         </table>
+      </form>
+    </section>
+    <section id="billing-container">
+      <form id="billing">
+        <label for="holder-b">Cardholder Name</label>
+        <input type="text" name="holder-b" id="">
+
+        <label for="card-b">Card Number</label>
+        <input type="text" name="card-b" id="">
+
+        <label for="exp">Expiration</label>
+        <input type="text" name="exp-mon" id="">
+        <input type="text" name="exp-year" id="">
+
+        <label for="city-b">City</label>
+        <input type="text" name="city-b" id="">
+
+        <label for="state-b">State</label>
+        <input type="text" name="state-b" id="">
+
+        <label for="zip-b">Zip</label>
+        <input type="text" name="zip-b" id="">
+
+        <label for="phone-b">Phone</label>
+        <input type="text" name="phone-b" id="">
       </form>
     </section>
   </main>
