@@ -59,18 +59,19 @@ main {
 }
 
 main > section {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   border-radius: 2px;
 }
 
-#cart-items-container {
+#cart-items-container, #shipping-container, #billing-container {
   flex-basis: 60%;
   padding: 0.9375em;
 }
 
 #cart-summary-container {
-  flex-basis: 30%;
+  flex-basis: 35%;
   padding: 0.9375em;
 }
 
@@ -169,4 +170,17 @@ main > section {
 
 .value {
   text-align: right;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: .5em;
 }
