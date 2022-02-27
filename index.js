@@ -11,10 +11,10 @@ college.set('port', (process.env.PORT || 5000))
 college.use(express.json())
 
 // --> HANDLE ENDPOINTS <--
-college.get('/', (req, res) => {
-  // Serve cart as homepage (for now)
-  res.sendFile(path.join(__dirname, '/cart/'))
-})
+// college.get('/', (req, res) => {
+//   // Serve cart as homepage (for now)
+//   res.sendFile(path.join(__dirname, '/cart/'))
+// })
 
 // Serve static if route not handled
 college.use('/', express.static(path.join(__dirname, '/')));

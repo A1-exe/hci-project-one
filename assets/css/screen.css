@@ -184,3 +184,15 @@ main > section {
   flex-grow: 1;
   padding: .5em;
 }
+
+#homescreen {
+  flex-direction: column;
+}
+
+#homescreen a {
+  color: red;
+}
+
+#homescreen a:hover {
+  text-decoration: underline;
+}
