@@ -33,52 +33,34 @@
         <header>
           Shipping
         </header>
-        <div class="row">
-          <div class="col">
-            <label for="first-s">First Name</label>
-            <input type="text" name="first-s" id="">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <label for="last-s">Last Name</label>
-            <input type="text" name="first-s" id="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label for="address-s">Address</label>
-            <input type="text" name="address-s" id="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label for="city-s">City</label>
-            <input type="text" name="city-s" id="">
-          </div>
-          <div class="col">
-            <label for="state-s">State</label>
-            <input type="text" name="state-s" id="">
-          </div>
-          <div class="col">
-            <label for="zip-s">Zip</label>
-            <input type="text" name="zip-s" id="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label for="phone-s">Phone</label>
-            <input type="text" name="phone-s" id="">
-          </div>
-        </div>
+        <label for="first-s">First Name</label>
+        <input type="text" name="first-s" id="">
+        
+        <label for="last-s">Last Name</label>
+        <input type="text" name="first-s" id="">
+        <label for="address-s">Address</label>
+        <input type="text" name="address-s" id="">
+        <label for="country-s">Country</label>
+        <select type="text" name="country-s" id="">
+          <option value="US">United States</option>
+        </select>
+        <fieldset>
+          <label for="city-s">City</label>
+          <input type="text" name="city-s" id="">
+          <label for="state-s">State</label>
+          <input type="text" name="state-s" id="">
+          <label for="zip-s">Zip</label>
+          <input type="text" name="zip-s" id="">
+        </fieldset>
+        <label for="phone-s">Phone</label>
+        <input type="text" name="phone-s" id="">
       </form>
     </section>
     <section id="cart-summary-container">
-      <form id="cart-summary">
+      <form id="cart-summary" action="../checkout">
         <section id="directions">
-          <button id="keep-shop" formaction="../cart/">Edit Cart</button>
-          <button id="check-out" formaction="../checkout/">Check Out</button>
+          <button id="keep-shop" formaction="../">Keep Shopping</button>
+          <button id="check-out" type="submit">Continue</button>
         </section>
         <header>
           <h1>Summary</h1>
@@ -97,7 +79,11 @@
               <td class="category">Tax:</td>
               <td class="value">$300</td>
             </tr>
-            <tr id="total">
+          </tbody>
+        </table>
+        <table id="total">
+          <tbody>
+            <tr>
               <td class="category">Total:</td>
               <td class="value">$300</td>
             </tr>
@@ -110,42 +96,25 @@
         <header>
           Billing
         </header>
-
-        <div class="row">
-          <div class="col">
-            <label for="holder-b">Cardholder Name</label>
-            <input type="text" name="holder-b" id="">
-          </div>
-        </div>
         
-        <div class="row">
-          <div class="col">
-            <label for="card-b">Card Number</label>
-            <input type="text" name="card-b" id="">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-          <label for="exp">Expiration Date</label>
-              <input type="month" name="exp" min="2018-03" value="2018-05" id="">
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <label for="city-b">City</label>
-            <input type="text" name="city-b" id="">
-          </div>
-          <div class="col">
-            <label for="state-b">State</label>
-            <input type="text" name="state-b" id="">
-          </div>
-          <div class="col">
-            <label for="zip-b">Zip</label>
-            <input type="text" name="zip-b" id="">
-          </div>
-        </div>
+        <label for="holder-b">Cardholder Name</label>
+        <input type="text" name="holder-b" id="">
+        
+        <label for="card-b">Card Number</label>
+        <input type="text" name="card-b" id="">
+        
+        <label for="exp">Expiration Date</label>
+        <input type="month" name="exp" min="2018-03" value="2018-05" id="">
+        
+        <label for="cvv">CVV</label>
+        <input type="text">
+        
+        <label for="city-b">City</label>
+        <input type="text" name="city-b" id="">
+        <label for="state-b">State</label>
+        <input type="text" name="state-b" id="">
+        <label for="zip-b">Zip</label>
+        <input type="text" name="zip-b" id="">
       </form>
     </section>
   </main>
