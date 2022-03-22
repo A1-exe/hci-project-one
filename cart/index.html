@@ -12,12 +12,19 @@
 <body>
   <header>
     <nav>
-      <a href="../">
-        <h1>CYBERSTART SECURITY</h1>
-      </a>
-      <a href="../cart/" id="cart-icon">
-        &#x1F6CD;
-      </a>
+      <ol>
+        <li id="company">
+          <a href="../">CYBERSTART SECURITY</a>
+        </li>
+        <ol id="pages">
+          <li>
+            <a href="../cart/" id="cart-icon">Cart</a>
+          </li>
+          <li>
+            <a href="../checkout/" id="cart-icon">Checkout</a>
+          </li>
+        </ol>
+      </ol>
     </nav>
   </header>
   <main id="cart">
@@ -26,7 +33,7 @@
         <header>
           <h1>Shopping Cart (3 Items)</h1>
         </header>
-        <li class="cart-item">
+        <ul class="cart-item">
           <figure class="icon">
             <img src="../assets/img/trophy.png" alt="">
             <figcaption></figcaption>
@@ -38,15 +45,15 @@
             <li class="description">
               This certification will turn you into a 1337 hacker.
             </li>
-            <li class="misc">
-              <h2 class="price">$300</h2>
-              <button class="remove">Remove</button>
-              |
-              <button class="edit">Edit</button>
-            </li>
           </ul>
-        </li>
-        <li class="cart-item">
+          <li class="misc">
+            <h2 class="price">$300</h2>
+            <button class="remove">Remove</button>
+            |
+            <button class="edit">Edit</button>
+          </li>
+        </ul>
+        <ul class="cart-item">
           <figure class="icon">
             <img src="../assets/img/trophy.png" alt="">
             <figcaption></figcaption>
@@ -58,15 +65,15 @@
             <li class="description">
               This certification will turn you into a 31337 hacker.
             </li>
-            <li class="misc">
-              <h2 class="price">$300</h2>
-              <button class="remove">Remove</button>
-              |
-              <button class="edit">Edit</button>
-            </li>
           </ul>
-        </li>
-        <li class="cart-item">
+          <li class="misc">
+            <h2 class="price">$300</h2>
+            <button class="remove">Remove</button>
+            |
+            <button class="edit">Edit</button>
+          </li>
+        </ul>
+        <ul class="cart-item">
           <figure class="icon">
             <img src="../assets/img/trophy.png" alt="">
             <figcaption></figcaption>
@@ -78,21 +85,21 @@
             <li class="description">
               This certification will turn you into a 2312 hacker.
             </li>
-            <li class="misc">
-              <h2 class="price">$300</h2>
-              <button class="remove">Remove</button>
-              |
-              <button class="edit">Edit</button>
-            </li>
           </ul>
-        </li>
+          <li class="misc">
+            <h2 class="price">$300</h2>
+            <button class="remove">Remove</button>
+            |
+            <button class="edit">Edit</button>
+          </li>
+        </ul>
       </ul>
     </section>
     <section id="cart-summary-container">
-      <form id="cart-summary">
+      <form id="cart-summary" action="../checkout">
         <section id="directions">
           <button id="keep-shop" formaction="../">Keep Shopping</button>
-          <button id="check-out" formaction="../checkout/">Continue</button>
+          <button id="check-out" type="submit">Continue</button>
         </section>
         <header>
           <h1>Summary</h1>
@@ -111,7 +118,11 @@
               <td class="category">Tax:</td>
               <td class="value">$300</td>
             </tr>
-            <tr id="total">
+          </tbody>
+        </table>
+        <table id="total">
+          <tbody>
+            <tr>
               <td class="category">Total:</td>
               <td class="value">$300</td>
             </tr>
