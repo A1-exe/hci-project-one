@@ -27,20 +27,20 @@
       </ol>
     </nav>
   </header>
-  <main id="checkout">
+  <form id="checkout" action="../">
     <section id="shipping-container">
-      <form id="shipping">
+      <section id="shipping">
         <header>
           Shipping
         </header>
-        <ul id="form-body">
+        <ul class="form-body">
           <li>
-            <label for="fullname-s">Full Name</label>
-            <input type="text" name="fullname-s" placeholder="Your name...">
+            <label for="fullname-s">Full name</label>
+            <input type="text" name="fullname-s" placeholder="Your name..." required>
           </li>
           <li>
             <label for="address-s">Address</label>
-            <input type="text" name="address1-s" placeholder="Street address or P.O. Box">
+            <input type="text" name="address1-s" placeholder="Street address or P.O. Box" required>
             <input type="text" name="address2-s" placeholder="Apt, suite, unit, building, floor, etc.">
           </li>
           <li>
@@ -49,33 +49,31 @@
               <option value="US">United States</option>
             </select>
           </li>
-          <li>
-            <ul id="location">
-              <li>
-                <label for="city-s">City</label>
-                <input type="text" name="city-s" placeholder="City">
-              </li>
-              <li>
-                <label for="state-s">State</label>
-                <input type="text" name="state-s" placeholder="State">
-              </li>
-              <li>
-                <label for="zip-s">Zip Code</label>
-                <input type="text" name="zip-s" placeholder="Postal / Zip Code">
-              </li>
-            </ul>
-          </li>
+          <ul class="location">
+            <li>
+              <label for="city-s">City</label>
+              <input type="text" name="city-s" placeholder="City" required>
+            </li>
+            <li>
+              <label for="state-s">State</label>
+              <input type="text" name="state-s" placeholder="State" required>
+            </li>
+            <li>
+              <label for="zip-s">Zip Code</label>
+              <input type="text" name="zip-s" placeholder="Postal / Zip Code" required>
+            </li>
+          </ul>
           <li>
             <label for="phone-s">Phone</label>
-            <input type="tel" name="phone-s" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="### ### ####">
+            <input type="tel" name="phone-s" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="### ### ####" required>
           </li>
         </ul>
-      </form>
+      </section>
     </section>
     <section id="cart-summary-container">
-      <form id="cart-summary" action="../">
+      <section id="cart-summary">
         <section id="directions">
-          <button id="keep-shop" formaction="../cart">Edit Cart</button>
+          <a id="keep-shop" href="../cart">Edit Cart</a>
           <button id="check-out" type="submit">Complete</button>
         </section>
         <header>
@@ -105,34 +103,67 @@
             </tr>
           </tbody>
         </table>
-      </form>
+      </section>
     </section>
     <section id="billing-container">
-      <form id="billing">
+      <section id="billing">
         <header>
           Billing
         </header>
-        
-        <label for="holder-b">Cardholder Name</label>
-        <input type="text" name="holder-b">
-        
-        <label for="card-b">Card Number</label>
-        <input type="text" name="card-b">
-        
-        <label for="exp">Expiration Date</label>
-        <input type="month" name="exp" min="2018-03" value="2018-05">
-        
-        <label for="cvv">CVV</label>
-        <input type="text">
-        
-        <label for="city-b">City</label>
-        <input type="text" name="city-b">
-        <label for="state-b">State</label>
-        <input type="text" name="state-b">
-        <label for="zip-b">Zip</label>
-        <input type="text" name="zip-b">
-      </form>
+        <ul class="form-body">
+          <li>
+            <label for="cardnumber">Card Number</label>
+            <input type="text" name="cardnumber" required>
+          </li>
+          <li>
+            <label for="cardname">Name on card</label>
+            <input type="text" name="cardname" required>
+          </li>
+          <li></li>
+          <ul>
+            <li>
+              <label for="expiration">Expiration date</label>
+            <input type="month" name="expiration" required>
+            </li>
+            <li>
+              <label for="cvv">CVV</label>
+            <input type="text" name="cvv" placeholder="XXX" pattern="[0-9]{3}" required>
+            </li>
+          </ul>
+          <ul>
+            <input type="checkbox" name="show-address-b" id="show-address-b">
+            <label for="show-address-b">Enter a new address</label>
+            <ul id="address-b-form">
+              <li>
+                <label for="address-b">Address</label>
+                <input type="text" name="address1-b" placeholder="Street address or P.O. Box">
+                <input type="text" name="address2-b" placeholder="Apt, suite, unit, building, floor, etc.">
+              </li>
+              <li>
+                <label for="country-b">Country</label>
+                <select type="text" name="country-b">
+                  <option value="US">United States</option>
+                </select>
+              </li>
+              <ul class="location">
+                <li>
+                  <label for="city-b">City</label>
+                  <input type="text" name="city-b" placeholder="City">
+                </li>
+                <li>
+                  <label for="state-b">State</label>
+                  <input type="text" name="state-b" placeholder="State">
+                </li>
+                <li>
+                  <label for="zip-b">Zip Code</label>
+                  <input type="text" name="zip-b" placeholder="Postal / Zip Code">
+                </li>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+      </section>
     </section>
-  </main>
+  </form>
 </body>
 </html>

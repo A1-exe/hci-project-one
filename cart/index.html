@@ -27,7 +27,7 @@
       </ol>
     </nav>
   </header>
-  <main id="cart">
+  <form id="cart" action="../checkout">
     <section id="cart-items-container">
       <ul id="cart-items">
         <header>
@@ -96,9 +96,9 @@
       </ul>
     </section>
     <section id="cart-summary-container">
-      <form id="cart-summary" action="../checkout">
+      <section id="cart-summary" action="../checkout">
         <section id="directions">
-          <button id="keep-shop" formaction="../">Keep Shopping</button>
+          <a id="keep-shop" href="../">Keep Shopping</a>
           <button id="check-out" type="submit">Continue</button>
         </section>
         <header>
@@ -128,8 +128,8 @@
             </tr>
           </tbody>
         </table>
-      </form>
+      </section>
     </section>
-  </main>
+  </form>
 </body>
 </html>

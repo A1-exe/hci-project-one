@@ -62,13 +62,13 @@ a {
   text-decoration: none;
 }
 
-main {
+form, main {
   display: flex;
   padding-top: 1.5em;
   flex-wrap: wrap;
 }
 
-main > section {
+form > section, main > section {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -148,7 +148,7 @@ a:hover, .remove:hover, .edit:hover {
   display: flex;
 }
 
-#directions button {
+#directions button, #directions a {
   flex-basis: 50%;
   font-weight: 500;
   color: var(--red);
@@ -156,7 +156,14 @@ a:hover, .remove:hover, .edit:hover {
   border-radius: 3px;
   border: 1px solid var(--red);
   padding: 1em 2em;
-  margin: 2px
+  margin: 2px;
+  text-align: center;
+}
+
+#directions #keep-shop {
+  color: var(--red);
+  background-color: white;
+  flex-basis: 35%;
 }
 
 #directions #check-out {
@@ -204,60 +211,69 @@ a:hover, .remove:hover, .edit:hover {
   text-align: right;
 }
 
-form > header, #cart-items > header {
+section > header, #cart-items > header {
   font-weight: 600;
   margin-bottom: .25em;
   text-decoration: underline;
 }
 
-#form-body {
+.form-body {
   display: flex;
   flex-direction: column;
   margin-left: .75em;
 }
 
-#form-body li {
+.form-body li {
   display: flex;
   flex-direction: column;
   margin-top: .5em;
 }
 
-#form-body li label {
+.form-body li label {
   flex-basis: 20%;
 }
 
-#form-body li input {
+.form-body li input {
   flex-basis: 80%;
 }
 
-#form-body  {
+.form-body  {
   display: flex;
 }
 
-#location {
+.location {
   display: flex;
   flex-basis: 100%;
   flex-direction: row;
-  margin-bottom: .5em;
+  margin-top: .5em;
 }
 
-#location li {
+.location li {
   flex-direction: column;
   margin-top: 0;
   margin-right: .2em;
 }
 
-#location li:last-child {
+.location li:nth-child(n) {
+  flex-basis: 33%;
+}
+
+.location li:last-child {
   margin-right: 0;
 }
 
-input {
-  margin-top: .2em;
+#show-address-b {
+  margin-top: 1em;
 }
 
-input[type="text"] {
-  border: 1px solid #ccc;
+#show-address-b:not(:checked) ~ #address-b-form  {
+  display: none;
+}
+
+input {
+  border: 1px solid #7e7e7e;
   border-radius: 3px;
+  margin-top: .2em;
 }
 
 #homescreen {
