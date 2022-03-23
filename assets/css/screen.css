@@ -76,14 +76,26 @@ form > section, main > section {
 }
 
 #cart-items-container, #shipping-container, #billing-container {
-  flex-basis: 60%;
+  margin: 0 auto 0 auto;
+  flex-basis: 100%;
   padding: 0.9375em;
 }
 
-#cart-summary-container {
-  flex-basis: 35%;
-  padding: 0.9375em;
+#shipping-container {
+  order: 1;
 }
+
+#billing-container {
+  order: 2;
+}
+
+#cart-summary-container {
+  order: 3;
+  flex-basis: 100%;
+  padding: 0.9375em;
+  margin: 0 auto 0 auto;
+}
+
 
 #cart-items, #cart-summary, #shipping, #billing {  
   display: flex;
@@ -244,13 +256,13 @@ section > header, #cart-items > header {
 .location {
   display: flex;
   flex-basis: 100%;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: .5em;
 }
 
 .location li {
   flex-direction: column;
-  margin-top: 0;
+  margin-top: .3em;
   margin-right: .2em;
 }
 
@@ -267,13 +279,17 @@ section > header, #cart-items > header {
 }
 
 #show-address-b:not(:checked) ~ #address-b-form  {
-  display: none;
+  visibility: collapse;
 }
 
 input {
   border: 1px solid #7e7e7e;
   border-radius: 3px;
   margin-top: .2em;
+}
+
+input {
+  padding: .5em;
 }
 
 #homescreen {
@@ -286,4 +302,53 @@ input {
 
 #homescreen a:hover {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 45.3125em) { /* 725 px, 16 pt */
+  .location {
+    flex-direction: row;
+  }
+
+  #cart-items-container, #shipping-container, #billing-container {
+    flex-basis: 80%;
+  }
+
+  #cart-summary-container {
+    flex-basis: 80%;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 75em) { /* 1200 px, 16 pt */
+  #cart-summary-container {
+    order: 2
+  }
+
+  #billing-container {
+    order: 3
+  }
+
+  #cart-items, #cart-summary, #shipping, #billing {  
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightest-color);
+    padding: 1.5em;
+  }
+
+  #cart-items-container, #shipping-container, #billing-container {
+    margin: 0;
+    flex-basis: 60%;
+  }
+
+  .location li {
+    flex-direction: column;
+    margin-top: .0;
+    margin-right: .2em;
+  }
+
+  #cart-summary-container {
+    order: 3;
+    flex-basis: 35%;
+    padding: 0.9375em;
+  }
 }
