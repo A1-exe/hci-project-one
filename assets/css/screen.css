@@ -64,7 +64,7 @@ a {
 
 main {
   display: flex;
-  padding-top: 3.5em;
+  padding-top: 1.5em;
   flex-wrap: wrap;
 }
 
@@ -204,6 +204,61 @@ a:hover, .remove:hover, .edit:hover {
   text-align: right;
 }
 
+form > header, #cart-items > header {
+  font-weight: 600;
+  margin-bottom: .25em;
+  text-decoration: underline;
+}
+
+#form-body {
+  display: flex;
+  flex-direction: column;
+  margin-left: .75em;
+}
+
+#form-body li {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5em;
+}
+
+#form-body li label {
+  flex-basis: 20%;
+}
+
+#form-body li input {
+  flex-basis: 80%;
+}
+
+#form-body  {
+  display: flex;
+}
+
+#location {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: row;
+  margin-bottom: .5em;
+}
+
+#location li {
+  flex-direction: column;
+  margin-top: 0;
+  margin-right: .2em;
+}
+
+#location li:last-child {
+  margin-right: 0;
+}
+
+input {
+  margin-top: .2em;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
 #homescreen {
   flex-direction: column;
