@@ -60,12 +60,12 @@
             </li>
             <li>
               <label for="zip-s">Zip Code</label>
-              <input type="text" name="zip-s" placeholder="Postal / Zip Code" required>
+              <input type="number" name="zip-s" placeholder="Postal / Zip Code" required>
             </li>
           </ul>
           <li>
             <label for="phone-s">Phone</label>
-            <input type="tel" name="phone-s" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" placeholder="### ### ####" required>
+            <input type="tel" name="phone-s" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-###-####" required>
           </li>
         </ul>
       </section>
@@ -113,7 +113,7 @@
         <ul class="form-body">
           <li>
             <label for="cardnumber">Card Number</label>
-            <input type="text" name="cardnumber" required>
+            <input type="number" name="cardnumber" required>
           </li>
           <li>
             <label for="cardname">Name on card</label>
@@ -127,7 +127,7 @@
             </li>
             <li>
               <label for="cvv">CVV</label>
-            <input type="text" name="cvv" placeholder="XXX" pattern="[0-9]{3}" required>
+            <input type="number" name="cvv" placeholder="XXX" pattern="[0-9]{3}" required>
             </li>
           </ul>
           <ul>

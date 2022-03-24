@@ -15,6 +15,16 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   --red: rgb(255, 0, 0);
 }
 
+header {
+  font: 1em 'DM Serif Display', serif;
+}
+
+section {
+  font: 1em 'Nunito', sans-serif;
+  margin-bottom: 1em;
+}
+
+
 body {
   background-color: var(--light-color);
 }
@@ -280,6 +290,7 @@ section > header, #cart-items > header {
 
 #show-address-b:not(:checked) ~ #address-b-form  {
   visibility: collapse;
+  display: none
 }
 
 input {
@@ -290,6 +301,14 @@ input {
 
 input {
   padding: .5em;
+}
+
+input[name^="phone"] {
+  width: 10em
+}
+
+input[name="cvv"] {
+  width: 5em
 }
 
 #homescreen {
@@ -309,12 +328,11 @@ input {
     flex-direction: row;
   }
 
-  #cart-items-container, #shipping-container, #billing-container {
-    flex-basis: 80%;
+  #cart-items-container, #shipping-container, #billing-container, #cart-summary-container {
+    flex-basis: 90%;
   }
 
   #cart-summary-container {
-    flex-basis: 80%;
     margin: 0 auto 0 auto;
   }
 }
