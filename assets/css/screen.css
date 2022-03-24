@@ -236,7 +236,6 @@ a:hover, .remove:hover, .edit:hover {
 section > header, #cart-items > header {
   font-weight: 600;
   margin-bottom: .25em;
-  text-decoration: underline;
 }
 
 .form-body {
@@ -303,11 +302,11 @@ input {
   padding: .5em;
 }
 
-input[name^="phone"] {
+#phone-s {
   width: 10em
 }
 
-input[name="cvv"] {
+#cvv {
   width: 5em
 }
 
