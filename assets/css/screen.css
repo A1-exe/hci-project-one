@@ -123,9 +123,6 @@ main > section, #cart-items, #cart-summary, #shipping, #billing {
 
 .cart-item .icon {
   grid-row: span 3;
-}
-
-.cart-item .icon img {
   max-width: 9.375em;
 }
 
@@ -154,9 +151,15 @@ main > section, #cart-items, #cart-summary, #shipping, #billing {
   font-weight: 600;
 }
 
-.cart-item .misc button {
+
+.cart-item .misc input[type="button"] {
   border: none;
   background: none;
+}
+
+.remove {
+  border-radius: 0;
+  border-right: 1px solid black !important;
 }
 
 .remove, .edit {
@@ -171,7 +174,7 @@ a:hover, .remove:hover, .edit:hover {
   display: flex;
 }
 
-#directions button, #directions a {
+#directions input[type="submit"], #directions a {
   flex-basis: 50%;
   font-weight: 500;
   color: var(--red);
