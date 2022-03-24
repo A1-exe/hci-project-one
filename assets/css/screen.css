@@ -210,12 +210,12 @@ a:hover, .remove:hover, .edit:hover {
   border-bottom: .1em solid var(--dark-color);
 }
 
-#cost-listing tr {
+#cost-listing li {
   display: flex;
   width: 100%;
 }
 
-#cost-listing td {
+#cost-listing li p {
   flex-basis: 50%;
   margin: .2em 0 .2em 0;
 }
