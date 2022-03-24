@@ -358,10 +358,6 @@ header {
 }
 
 @media screen and (min-width: 75em) { /* 1200 px, 16 pt */
-  #cart-summary-container {
-    order: 2
-  }
-
   #billing-container {
     order: 3
   }
@@ -385,7 +381,7 @@ header {
   }
 
   #cart-summary-container {
-    order: 3;
+    order: 2;
     flex-basis: 35%;
     padding: 0.9375em;
   }
