@@ -41,7 +41,8 @@
           <li>
             <label for="address-s">Address</label>
             <input type="text" id="address-s" placeholder="Street address or P.O. Box" required />
-            <input type="text" name="address2-s" placeholder="Apt, suite, unit, building, floor, etc." />
+            <label for="address2-s">Address 2</label>
+            <input type="text" id="address2-s" placeholder="Apt, suite, unit, building, floor, etc." />
           </li>
           <li>
             <label for="country-s">Country</label>
@@ -96,13 +97,14 @@
             </li>
           </ul>
           <ul>
-            <input type="checkbox" name="show-address-b" id="show-address-b" />
+            <input type="checkbox" id="show-address-b" id="show-address-b" />
             <label for="show-address-b">Enter a new address</label>
             <ul id="address-b-form">
               <li>
                 <label for="address-b">Address</label>
-                <input type="text" id="address-b" placeholder="Street address or P.O. Box" />
-                <input type="text" name="address2-b" placeholder="Apt, suite, unit, building, floor, etc." />
+                <input type="text" id="address-b" placeholder="Street address or P.O. Box" required />
+                <label for="address2-b">Address 2</label>
+                <input type="text" id="address2-b" placeholder="Apt, suite, unit, building, floor, etc." />
               </li>
               <li>
                 <label for="country-b">Country</label>
@@ -161,5 +163,6 @@
       </section>
     </section>
   </form>
+  <script src="../assets/js/site.js"></script>
 </body>
 </html>
