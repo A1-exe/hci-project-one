@@ -30,6 +30,7 @@ body {
 }
 
 nav {
+  font-size: 1rem;
   background-color: var(--dark-color);
   display: flex;
 }
@@ -107,7 +108,7 @@ form > section, main > section {
 }
 
 
-main > section, form > section {  
+main > section, #cart-items, #cart-summary, #shipping, #billing {  
   display: flex;
   flex-direction: column;
   background-color: var(--lightest-color);
@@ -322,6 +323,25 @@ input[name="cvv"] {
 #homescreen a:hover {
   text-decoration: underline;
 }
+
+#order-confirmation {
+  text-align: center;
+}
+
+#order-confirmation section {
+ flex-basis: 100%;
+}
+
+header {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+#order-confirmation p {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
 
 @media screen and (min-width: 45.3125em) { /* 725 px, 16 pt */
   .location {
