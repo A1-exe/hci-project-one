@@ -7,7 +7,7 @@ const college = express()
 
 // --> LOAD ROUTERS <--
 college.enable('trust proxy');
-college.set('port', (process.env.PORT || 5000))
+college.set('port', (process.env.PORT || 5500))
 college.use(express.json())
 
 // --> HANDLE ENDPOINTS <--

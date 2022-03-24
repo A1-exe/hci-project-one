@@ -3,36 +3,37 @@
   "viewports": [
     {
       "label": "phone",
-      "width": 320,
+      "width": 360,
       "height": 480
     },
     {
       "label": "tablet",
-      "width": 1024,
-      "height": 768
+      "width": 810,
+      "height": 1080
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080
     }
   ],
-  "onBeforeScript": "puppet/onBefore.js",
-  "onReadyScript": "puppet/onReady.js",
+  "onReadyScript": "assets/js/site.js",
   "scenarios": [
     {
-      "label": "BackstopJS Homepage",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
+      "label": "Home",
+      "url": "http://localhost:5500/hci-project-one/"
+    },
+    {
+      "label": "Cart",
+      "url": "http://localhost:5500/hci-project-one/cart"
+    },
+    {
+      "label": "Checkout",
+      "url": "http://localhost:5500/hci-project-one/checkout"
+    },
+    {
+      "label": "Confirmation",
+      "url": "http://localhost:5500/hci-project-one/order-confirmation"
     }
   ],
   "paths": {
