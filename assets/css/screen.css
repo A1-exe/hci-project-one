@@ -107,7 +107,7 @@ form > section, main > section {
 }
 
 
-#cart-items, #cart-summary, #shipping, #billing {  
+main > section, form > section {  
   display: flex;
   flex-direction: column;
   background-color: var(--lightest-color);
